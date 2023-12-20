@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<p id="demo">
+
+</p>
+<p id="demo1">
+
+</p>
+
+<button onclick="numericalSort()">Sort numerically</button>
+<button onclick="alphaSort()"> Sort alphabatically</button>
+<button onclick="numbericaldec()"> Sort numbericaldec</button>
+<button onclick="TodayDate()"> Today's Date</button>
+<body>
+    <script>
+        const numbers= [1,23,123,34232,234232455,1,42434,56,99,10]
+        document.getElementById("demo").innerHTML=numbers;
+        function numericalSort(){
+            numbers.sort(function(a,b){return a-b});
+            document.getElementById("demo").innerHTML=numbers;
+        }
+        function alphaSort(){
+            numbers.sort();
+            document.getElementById("demo").innerHTML=numbers;
+        }
+        function numbericaldec(){
+            numbers.sort(function(a,b){return b-a});
+            document.getElementById("demo").innerHTML=numbers;
+        }
+        function TodayDate(){
+            const TodayDate = new Date(0);
+            document.getElementById("demo").innerHTML=TodayDate;
+        }
+     
+
+    </script>
+    
+</body>
+</html>
